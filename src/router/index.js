@@ -3,6 +3,7 @@ import { publicRoutes } from './routes/public'
 import { checkoutRoutes } from './routes/checkout'
 import { userRoutes } from './routes/user'
 import { authRoutes } from './routes/auth'
+import { useAuthStore } from '../stores/auth'
 
 const routes = [
   ...publicRoutes,
@@ -28,6 +29,21 @@ const router = createRouter({
     }
     return { top: 0 }
   },
+})
+
+router.beforeEach((to) => {
+  const authStore = useAuthStore()
+  if (to.meta?.requiresAuth && !authStore.isAuthenticated) {
+    return {
+      path: '/login/',
+      query: { redirect: to.fullPath },
+    }
+  }
+  if (to.name === 'Logout') {
+    authStore.clearSession()
+    return { path: '/login/' }
+  }
+  return true
 })
 
 export default router
