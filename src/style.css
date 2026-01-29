@@ -127,8 +127,43 @@
     color: var(--bg);
   }
 
+  .btn.ghost {
+    background: transparent;
+    color: var(--ink);
+  }
+
   .btn:hover {
     transform: translateY(-1px);
     box-shadow: 0 10px 20px rgba(31, 38, 40, 0.15);
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: var(--bg-muted);
+    color: var(--brand-strong);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .card {
+    margin-top: 32px;
+    padding: 24px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid var(--border);
+    box-shadow: 0 12px 30px rgba(31, 38, 40, 0.08);
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
   }
 }
