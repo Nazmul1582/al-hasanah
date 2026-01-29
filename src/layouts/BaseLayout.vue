@@ -4,6 +4,11 @@
       <RouterLink class="brand" to="/">Al-Hasanah</RouterLink>
       <nav class="nav">
         <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/products/">Products</RouterLink>
+        <RouterLink to="/categories/">Categories</RouterLink>
+        <RouterLink to="/brands/">Brands</RouterLink>
+        <RouterLink to="/shops/">Shops</RouterLink>
+        <RouterLink to="/login/">Login</RouterLink>
       </nav>
     </header>
     <main class="site-main">
