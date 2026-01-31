@@ -160,6 +160,15 @@
     box-shadow: 0 12px 30px rgba(31, 38, 40, 0.08);
   }
 
+  .product-thumb {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 12px;
+    background: var(--bg-muted);
+  }
+
   .actions {
     display: flex;
     flex-wrap: wrap;
