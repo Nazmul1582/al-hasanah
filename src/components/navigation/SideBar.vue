@@ -5,7 +5,7 @@ defineEmits(['onCategory', 'onSubCategory', 'onSubSubCategory'])
 </script>
 
 <template>
-  <aside class="panel">
+  <aside class="sidebar-panel">
     <PlaceholderBlock
       title="Sidebar"
       body="Categories and filters will live here."

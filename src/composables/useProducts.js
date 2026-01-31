@@ -11,6 +11,8 @@ export const useProducts = (options = {}) => {
     after: unref(options.after) ?? null,
     search: unref(options.search) ?? null,
     isActive: true,
+    isFlash: unref(options.isFlash) ?? null,
+    isNew: unref(options.isNew) ?? null,
   }))
 
   const { result, loading, error, fetchMore, refetch } = useQuery(

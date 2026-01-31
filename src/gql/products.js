@@ -7,6 +7,8 @@ export const STORE_PRODUCTS = gql`
     $after: String
     $search: String
     $isActive: Boolean
+    $isFlash: Boolean
+    $isNew: Boolean
   ) {
     storeProducts(
       siteId: $siteId
@@ -14,6 +16,8 @@ export const STORE_PRODUCTS = gql`
       after: $after
       search: $search
       isActive: $isActive
+      isFlash: $isFlash
+      isNew: $isNew
     ) {
       edges {
         node {

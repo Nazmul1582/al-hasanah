@@ -46,6 +46,33 @@
 }
 
 @layer components {
+  .page-shell {
+    @apply pb-[60px] pt-[48px] sm:pt-[64px] md:pt-0;
+  }
+
+  .page-container {
+    @apply mx-auto flex max-w-[1280px] pb-5 sm:px-4;
+  }
+
+  .page-grid {
+    @apply flex w-full gap-5;
+  }
+
+  .page-section {
+    @apply w-full md:mt-4;
+  }
+
+  .panel-surface {
+    @apply rounded-2xl border border-[#e4dccf] bg-white p-6 shadow-sm;
+  }
+
+  .panel-surface-compact {
+    @apply rounded-2xl border border-[#e4dccf] bg-white p-4 shadow-sm;
+  }
+
+  .sidebar-panel {
+    @apply w-[260px] rounded-2xl border border-[#e4dccf] bg-white p-6 shadow-sm;
+  }
   .app {
     min-height: 100vh;
     display: flex;
@@ -80,34 +107,6 @@
   .site-footer {
     color: var(--ink-muted);
     font-size: 0.95rem;
-  }
-
-  .page {
-    padding: 52px 6vw 72px;
-  }
-
-  .hero {
-    max-width: 720px;
-  }
-
-  .eyebrow {
-    text-transform: uppercase;
-    letter-spacing: 0.24em;
-    font-size: 0.75rem;
-    color: var(--brand);
-    font-weight: 600;
-    margin-bottom: 12px;
-  }
-
-  h1 {
-    margin: 0 0 16px;
-    font-size: clamp(2.4rem, 4vw, 3.6rem);
-    line-height: 1.1;
-  }
-
-  .lead {
-    font-size: 1.1rem;
-    color: var(--ink-soft);
   }
 
   .btn {
@@ -150,64 +149,7 @@
     margin-bottom: 16px;
   }
 
-  .card {
-    margin-top: 32px;
-    padding: 24px;
-    border-radius: 24px;
-    background: rgba(255, 255, 255, 0.7);
-    border: 1px solid var(--border);
-    box-shadow: 0 12px 30px rgba(31, 38, 40, 0.08);
-  }
-
-  .product-thumb {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 16px;
-    margin-bottom: 12px;
-    background: var(--bg-muted);
-  }
-
-  .actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 24px;
-  }
-
-  .product-grid {
-    margin-top: 32px;
-    display: grid;
-    gap: 16px;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  }
-
-  .home-layout {
-    display: grid;
-    gap: 24px;
-    grid-template-columns: minmax(220px, 280px) 1fr;
-  }
-
-  .home-content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .panel {
-    background: rgba(255, 255, 255, 0.85);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 20px;
-  }
-
   .placeholder-block h3 {
     margin: 0 0 10px;
-  }
-
-  @media (max-width: 900px) {
-    .home-layout {
-      grid-template-columns: 1fr;
-    }
   }
 }
