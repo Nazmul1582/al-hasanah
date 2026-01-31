@@ -17,7 +17,7 @@ const goCategory = (item) => {
     window.open(`https://${item.external}`, '_blank')
     return
   }
-  router.push(`/category/${item.slug || item.title}/${item.hid || item.id}/`)
+  router.push(`/category/${item.slug || item.title}/${item.id}/`)
 }
 </script>
 

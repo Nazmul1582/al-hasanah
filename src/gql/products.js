@@ -9,6 +9,7 @@ export const STORE_PRODUCTS = gql`
     $isActive: Boolean
     $isFlash: Boolean
     $isNew: Boolean
+    $categoryId: Int
   ) {
     storeProducts(
       siteId: $siteId
@@ -18,6 +19,7 @@ export const STORE_PRODUCTS = gql`
       isActive: $isActive
       isFlash: $isFlash
       isNew: $isNew
+      categoryId: $categoryId
     ) {
       edges {
         node {

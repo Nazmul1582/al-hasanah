@@ -7,10 +7,15 @@ const props = defineProps({
     type: String,
     default: '',
   },
+  categoryId: {
+    type: Number,
+    default: null,
+  },
 })
 
 const { items, loading, error } = useProducts({
   search: computed(() => props.plainSearch || null),
+  categoryId: computed(() => props.categoryId || null),
 })
 
 const nodes = computed(() =>

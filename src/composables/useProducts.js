@@ -13,6 +13,7 @@ export const useProducts = (options = {}) => {
     isActive: true,
     isFlash: unref(options.isFlash) ?? null,
     isNew: unref(options.isNew) ?? null,
+    categoryId: unref(options.categoryId) ?? null,
   }))
 
   const { result, loading, error, fetchMore, refetch } = useQuery(
